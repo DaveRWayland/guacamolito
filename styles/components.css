@@ -1,0 +1,55 @@
+/* ---------- T A B   B A R --------- */
+.tabBar {
+	margin-top: 3em;
+}
+
+.p-tabview-panel {
+	display: flex;
+	justify-content: center;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+	border-radius: 0;
+}
+#pr_id_14_header_0 {
+	border-top-left-radius: 15px;
+}
+#pr_id_14_header_3 {
+	border-top-right-radius: 15px;
+}
+
+/* ------------ ‍‍F O R M ----------- */
+
+.gastos-form {
+	width: 80%;
+	margin: 2em 0;
+}
+
+.gastos-form-container {
+	display: flex;
+	justify-content: center;
+}
+
+/* *********** Input ***********/
+.gastos-input {
+	margin: 2em 0;
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+}
+#InputText {
+	width: 35%;
+}
+#InputAmount,
+#InputAmount .p-inputnumber-input {
+	width: 25%;
+}
+
+/* *********** Result ***********/
+
+.gastos-result {
+	margin: 2em 4em;
+	display: flex;
+	justify-content: flex-end;
+	gap: 1em;
+}
