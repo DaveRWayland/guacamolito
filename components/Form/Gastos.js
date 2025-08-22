@@ -4,7 +4,7 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
-import { FloatLabel } from "primereact/floatlabel";
+import { handleNextStep } from "../../utils/handles";
 
 const columns = [
 	{ field: "element", header: "Gasto" },
@@ -12,9 +12,12 @@ const columns = [
 ];
 
 const Gastos = () => {
+	/* ----------- USE STATE ----------- */
 	const [register, setRegister] = useState([]);
 	const [inputText, setInputText] = useState("");
 	const [inputAmount, setInputAmount] = useState(0);
+
+	/* ------------ FUNTIONS ----------- */
 
 	const inputType = (options) => {
 		if (options.field === "amount") return amountEditor(options);
@@ -26,11 +29,12 @@ const Gastos = () => {
 
 		setInputText("");
 		setInputAmount(0);
+		document.querySelector("#InputText")?.focus();
+
 		switch (field) {
 			case "amount":
 				rowData[field] = newValue;
 				event.preventDefault();
-				set;
 				break;
 
 			default:
@@ -38,6 +42,13 @@ const Gastos = () => {
 				else event.preventDefault();
 				break;
 		}
+	};
+
+	const currencyAmount = (rowData) => {
+		return new Intl.NumberFormat("es-MX", {
+			style: "currency",
+			currency: "MXN",
+		}).format(rowData.amount);
 	};
 
 	const amountEditor = (options) => {
@@ -57,13 +68,6 @@ const Gastos = () => {
 		);
 	};
 
-	const currencyAmount = (rowData) => {
-		return new Intl.NumberFormat("es-MX", {
-			style: "currency",
-			currency: "MXN",
-		}).format(rowData.amount);
-	};
-
 	const textEditor = (options) => {
 		return (
 			<div className='flex-auto'>
@@ -76,6 +80,9 @@ const Gastos = () => {
 			</div>
 		);
 	};
+
+	/* ------------- HANDLES ------------ */
+
 	const handleAddRegister = () => {
 		const newRegister = [
 			...register,
@@ -89,7 +96,7 @@ const Gastos = () => {
 
 	const handleEnterKey = (e) => {
 		if (e.key === "Enter") {
-			debugger;
+			// debugger;
 			if (e.target.id === "InputText") {
 				document.querySelector("#InputAmount .p-inputnumber-input")?.focus();
 			} else if (e.target.name === "iAmount") {
@@ -97,6 +104,7 @@ const Gastos = () => {
 			}
 		}
 	};
+	/* ------------- RENDER ------------- */
 
 	return (
 		<>
@@ -114,7 +122,7 @@ const Gastos = () => {
 						onChange={(e) => setInputAmount(e.value)}
 						onKeyDown={handleEnterKey}
 					/>
-					<Button label='Agregar' icon='pi pi-check' size='small' onClick={handleAddRegister} />
+					<Button outlined severity='secondary' label='Agregar' icon='pi pi-check' size='small' onClick={handleAddRegister} />
 				</div>
 				<div className='card p-fluid gastos-form-container'>
 					<DataTable value={register} editMode='cell' showGridlines tableStyle={{ width: "30rem" }}>
@@ -137,9 +145,14 @@ const Gastos = () => {
 					<p className='gastos-result-text'>
 						<strong>
 							Total:
-							{new Intl.NumberFormat("es-MX", { style: "currency", currency: "MXN" }).format(register.reduce((acc, curr) => acc + curr.amount, 0))}
+							<span className='gastos-result-amount ml-3'>
+								{new Intl.NumberFormat("es-MX", { style: "currency", currency: "MXN" }).format(register.reduce((acc, curr) => acc + curr.amount, 0))}
+							</span>
 						</strong>
 					</p>
+				</div>
+				<div className='button-next  mt-5 w-100 flex justify-content-end'>
+					<Button outlined label='Siguiente' icon='pi pi-arrow-right' size='small' onClick={() => handleNextStep(2)} />
 				</div>
 			</div>
 		</>

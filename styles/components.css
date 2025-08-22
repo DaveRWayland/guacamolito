@@ -1,3 +1,5 @@
+/* ... existing styles ... */
+
 /* ---------- T A B   B A R --------- */
 .tabBar {
 	margin-top: 3em;
@@ -8,13 +10,33 @@
 	justify-content: center;
 }
 
+.gastos-form-container .p-column-header-content {
+	justify-content: center;
+}
+
+.gastos-form-container .p-datatable-thead > tr > th {
+	justify-content: center;
+}
+
+.gastos-form-container .p-datatable-tbody > tr > td {
+	justify-content: center;
+}
+
+.gastos-form-container table {
+	width: 100%;
+}
+
+.gastos-form-container .p-datatable-tbody > tr > td:nth-child(odd) {
+	background-color: #2a3441;
+}
+
 .p-tabview .p-tabview-nav li .p-tabview-nav-link {
 	border-radius: 0;
 }
-#pr_id_14_header_0 {
+#pr_id_20_header_0 {
 	border-top-left-radius: 15px;
 }
-#pr_id_14_header_3 {
+#pr_id_20_header_3 {
 	border-top-right-radius: 15px;
 }
 
@@ -31,6 +53,7 @@
 }
 
 /* *********** Input ***********/
+
 .gastos-input {
 	margin: 2em 0;
 	display: flex;
@@ -52,4 +75,310 @@
 	display: flex;
 	justify-content: flex-end;
 	gap: 1em;
+}
+
+.gastos-result-amount {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: rgb(34, 211, 238);
+}
+
+.button-next {
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+/* ------------- VENTAS ------------- */
+.ventas-container {
+	background-color: #1e2530;
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+	margin-top: 2em;
+}
+
+.ventas-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5em;
+	max-width: 90%;
+}
+
+.ventas-form label {
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+
+.ventas-form input {
+	padding: 10px;
+	border: 1px solid #4a5568;
+	border-radius: 5px;
+	background-color: #2a3441;
+	color: white;
+	width: 100px;
+}
+
+/* ----------- SUMINISTROS ---------- */
+.suministros-container {
+	background-color: #1e2530;
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.suministros-input-masa::-webkit-inner-spin-button,
+.suministros-input-masa::-webkit-outer-spin-button,
+.suministros-input-harina::-webkit-inner-spin-button,
+.suministros-input-harina::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.pi-minus {
+	color: rgb(34, 211, 238);
+}
+
+/* Contenedor columnas */
+.suministro-input-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.sumministros-input {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Inputs */
+.suministros-input-harina,
+.suministros-input-masa {
+	background-color: transparent;
+	border: 1px solid #4a5568;
+	color: white;
+	padding: 10px;
+	width: 100px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+/* Input focus */
+.suministros-input-harina:focus,
+.suministros-input-masa:focus {
+	outline: none;
+	border-color: rgb(34, 211, 238);
+}
+
+/* Espaciado vertical */
+.flex.flex-column.gap-2 input + input {
+	margin-top: 10px;
+}
+
+/* Línea amarilla entre inputs */
+.flex.flex-column.gap-2 input + input::before {
+	content: "";
+	background-color: rgb(34, 211, 238);
+	height: 2px;
+	margin: 5px 0;
+	width: 100%;
+	display: block;
+}
+
+/* Botón */
+.p-button-warning {
+	background-color: rgb(34, 211, 238);
+	border: none;
+	color: #1e2530;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.p-button-warning:hover {
+	background-color: #e0a800;
+}
+
+/* ----------- SUMINISTROS ---------- */
+
+.suministros-container {
+	background-color: #1e2530;
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+	width: 75%;
+}
+
+.suministros-content {
+	background-color: #2a3441;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.suministros-grid {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.suministros-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	column-gap: 6em;
+}
+
+.suministros-column .column-title {
+	margin-bottom: 20px;
+	font-size: 1.5em;
+}
+
+.suministros-column .input-group {
+	margin-bottom: 10px;
+}
+
+.suministros-input {
+	background-color: transparent;
+	border: 1px solid #4a5568;
+	color: white;
+	padding: 10px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+}
+.suministros-input::-webkit-inner-spin-button,
+.suministros-input::-webkit-outer-spin-button {
+	display: none;
+}
+.suministros-input-group:nth-of-type(odd) {
+	margin-top: 2em;
+}
+.suministros-input-group:first-of-type {
+	margin-top: 0;
+}
+.suministros-column .input-separator {
+	background-color: rgb(34, 211, 238);
+	height: 5px;
+	border-radius: 15px;
+	margin: 10px 0;
+	width: 100%;
+}
+
+.suministros-footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+/* -------------- CAJA -------------- */
+
+.caja-container {
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+	width: 75%;
+	margin: 2em auto;
+}
+
+.caja-switch {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-bottom: 20px;
+}
+
+.caja-switch label {
+	margin-right: 10px;
+}
+
+.caja-normal,
+.caja-specific {
+	background-color: #2a3441;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.caja-normal h3,
+.caja-specific h3 {
+	margin-bottom: 20px;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.input-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+
+.input-group label {
+	margin-bottom: 5px;
+}
+
+.p-inputnumber {
+	width: 100%;
+}
+
+.p-inputnumber-input {
+	background-color: transparent;
+	border: 1px solid #4a5568;
+	color: white;
+	padding: 10px;
+	width: 100%;
+	text-align: right;
+}
+
+.p-inputnumber-button {
+	background-color: #4a5568;
+	border: none;
+	color: white;
+}
+
+.p-inputnumber-button:hover {
+	background-color: rgb(34, 211, 238);
+	color: #1e2530;
+}
+
+.p-inputswitch {
+	margin-left: 10px;
+}
+
+.p-inputswitch .p-inputswitch-slider {
+	background-color: #4a5568;
+}
+
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+	background-color: rgb(34, 211, 238);
+}
+
+/* Estilos específicos para el modo específico */
+.caja-specific .input-group {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
+	gap: 10px;
+}
+
+.caja-specific .input-group label {
+	text-align: right;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.caja-container {
+		width: 95%;
+	}
+
+	.caja-specific .input-group {
+		grid-template-columns: 1fr;
+	}
+
+	.caja-specific .input-group label {
+		text-align: left;
+	}
 }

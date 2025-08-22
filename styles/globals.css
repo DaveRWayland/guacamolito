@@ -3,7 +3,7 @@
 }
 body {
 	background-color: black;
-	overflow: hidden;
+	overflow-x: hidden;
 	color-scheme: dark;
 }
 .pi {
@@ -17,6 +17,9 @@ body {
 .p-tabview .p-tabview-nav {
 	border-color: #1f2937;
 	max-width: 0;
+}
+.svg-inline--fa .fa-secondary {
+	opacity: 1;
 }
 
 @media (prefers-color-scheme: dark) {
