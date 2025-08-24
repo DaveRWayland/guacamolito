@@ -54,5 +54,18 @@ const CornIcon = {
 		],
 	],
 };
+const GlassIcon = {
+	prefix: "fac",
+	iconName: "GlassIcon",
+	icon: [
+		510,
+		510,
+		[],
+		"e006",
+		[
+			"M375.3 10.12C369.2 3.625 360.8 0 351.9 0H32.07C23.2 0 14.8 3.625 8.674 10.12c-5.998 6.375-9.121 15-8.621 23.88L32.04 482C33.17 498.9 47.16 512 64.04 512h255.9c16.87 0 30.87-13.12 31.99-30l31.99-448C384.4 25.12 381.3 16.5 375.3 10.12zM313 128h-242.1L66.38 64h251.2L313 128z",
+		],
+	],
+};
 
-library.add(faPepperHot, faCircle, coffeeBeanIcon, avocadoIcon, TotoposIcon, CornIcon);
+library.add(faPepperHot, faCircle, coffeeBeanIcon, avocadoIcon, TotoposIcon, CornIcon, GlassIcon);

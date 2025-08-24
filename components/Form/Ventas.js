@@ -53,7 +53,7 @@ const Ventas = () => {
 						onValueChange={(e) => setVenta({ ...venta, sopes: e.value })}
 					/>
 					<label htmlFor='frijoles' className='dflex gap-3'>
-						<FontAwesomeIcon icon={["fac", "coffee-bean"]} /> Frijoles
+						<FontAwesomeIcon icon={["fac", "GlassIcon"]} /> Frijoles
 					</label>
 					<InputNumber
 						showButtons

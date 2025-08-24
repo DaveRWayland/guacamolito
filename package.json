@@ -14,12 +14,13 @@
 		"@fortawesome/react-fontawesome": "^0.2.5",
 		"@kombai/react-error-boundary": "^1.1.0",
 		"date-fns": "^4.1.0",
-		"next": "15.5.0",
-		"react": "19.1.0",
-		"react-dom": "19.1.0",
+		"next": "^15.5.0",
 		"primeflex": "^4.0.0",
+		"primeicons": "^7.0.0",
 		"primereact": "latest",
-		"primeicons": "^7.0.0"
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"react-pro-sidebar": "^1.1.0"
 	},
 	"devDependencies": {
 		"@types/node": "^20.19.11",
